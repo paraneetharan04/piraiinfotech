@@ -17,8 +17,8 @@
                <input type="text" id="lastname">
             </p>
             <p>
-               <label>Email</label>
-               <input type="text" id="email">
+               <label>Department</label>
+               <input type="text" id="Department">
             </p>
             <P><button type="button"  id="save">Save</button>
          </form>
@@ -30,7 +30,7 @@
 			<tr>
                <th>First Name</th>
                <th>Last Name</th>
-               <th>Email ID</th>
+               <th>Department</th>
                </tr>
             </thead>
 		 <tbody id = "tborder">
@@ -41,10 +41,10 @@
          $('#save').on('click', function() {
          var firstname=$('#first_name').val();
          var lastname=$('#lastname').val();
-         var email=$('#email').val();
+         var Department=$('#Department').val();
   
-         if(firstname!="" && lastname !="" && email!=""){
-         $('#demo tbody').append('<tr><td>'+firstname+'</td><td>'+lastname+'</td><td>'+email +'</td></tr>');
+         if(firstname!="" && lastname !="" && Department!=""){
+         $('#demo tbody').append('<tr><td>'+firstname+'</td><td>'+lastname+'</td><td>'+Department+'</td></tr>');
          }
          });
          $(document).on('click','.remCF1',function(){
@@ -53,17 +53,21 @@
 	  <style>
 			thead, th{
 			border: 1px solid black;
+			
 			}
 			tbody, td {
-			border: 1px solid black;
+			border: 1px solid black;			
 			}
 			table {
-			    border:none;
-				border-collapse: collapse;
-				}
-				h2{
-				color:Green;
-				}
+		        border:none;
+			border-collapse: collapse;
+			background-color: #00FFFF;
+			}
+			body{
+			background-color:#A9A9A9;
+			}
+			h2 {text-align: center;}
+			label{color: #000000;}
 	  </style>
    </body>
 </html>
