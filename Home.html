@@ -4,25 +4,28 @@
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    <body>
       <div>
-         <div>
+         <div id="header">
             <h2> Pirai infotech Assignment</h2>
-         </div>
+         </div></br></br></br></br></br></br>
+		 <div class="info">
+			<p><strong>Info!</strong> &nbsp;Input required for all fields.</p>
+		</div>
          <form>
             <p>
-               <label>First Name</label>
-               <input type="text" id="first_name">
+               <label>First Name</label>&nbsp;&nbsp;&nbsp;
+               <input type="text" id="first_name" class="tbox">
             </p>
             <p>
-               <label>Last Name</label>
-               <input type="text" id="lastname">
+               <label>Last Name</label>&nbsp;&nbsp;&nbsp;
+               <input type="text" id="lastname" class="tbox">
             </p>
             <p>
                <label>Department</label>
-               <input type="text" id="Department">
+               <input type="text" id="Department" class="tbox">
             </p>
-            <P><button type="button"  id="save">Save</button>
+            <P><button type="button"  id="save" class="savebtn">Save</button>
          </form>
-         <br>
+
          <table id="demo">
 
             <thead>
@@ -37,6 +40,9 @@
 		</tbody>           
          </table>
       </div>
+	  <div id="footer">
+            <p> assignmentpiraiinfotech@copyright 2021</p>
+         </div>
       <script type="text/javascript">
          $('#save').on('click', function() {
          var firstname=$('#first_name').val();
@@ -52,22 +58,81 @@
       </script>
 	  <style>
 			thead, th{
-			border: 1px solid black;
-			
+			width: 35%;	
+			border: 2px solid #ddd;
+			padding: 8px;	
+			background-color: #4CAF50;
+			font-size:15px;
+			color:white;
 			}
 			tbody, td {
-			border: 1px solid black;			
+			border: 1px solid black;
+			width: 35%;
+			border: 1px solid #ddd;
+			padding: 8px;
 			}
 			table {
-		        border:none;
+		    border:none;
 			border-collapse: collapse;
-			background-color: #00FFFF;
+			font-family:calibri;
 			}
-			body{
-			background-color:#A9A9A9;
+			#header {
+			background-color: #1abc9c;
+			color: white;
+			padding: 9px;
+			font-size: 20px;
+			text-align:center;
+			font-family:calibri;
+			width: 100%;
+			position: fixed;
+			left: 0;
+			top: 0;
 			}
-			h2 {text-align: center;}
-			label{color: #000000;}
+			label{
+			font-weight: bold;
+			font-family:calibri;
+			}
+			.savebtn {
+			width: 30%;
+			background-color: #4CAF50;
+			color: white;
+			padding: 14px 10px;
+			margin: 8px 0;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			}
+			.tbox{
+			width: 20%;
+			padding: 12px 20px;
+			margin: 10px 30px;
+			display: inline-block;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+			}
+			.info {
+			padding: 10px;
+			background-color: #e7f3fe;
+			border-left: 6px solid #2196F3;
+			font-family:calibri;
+			}
+			#demo{
+			width: auto;
+			margin-right: 300px;
+			margin-left: auto;
+			margin-top: -300px;
+			}
+			#footer {
+			position: fixed;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			background-color: #1abc9c;
+			color: black;
+			text-align: center;
+			font-family:calibri;
+			}
 	  </style>
    </body>
 </html>
